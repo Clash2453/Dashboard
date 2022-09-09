@@ -9,13 +9,14 @@ export default {
 <template>
   <nav class="nav-bar">
     <ul class="nav-list">
-      <router-link to="/" class="nav-link">Home</router-link>
       <router-link to="/calendar" class="nav-link">Calendar</router-link>
       <router-link to="/inbox" class="nav-link">Inbox</router-link>
+      <router-link to="/" class="nav-link">Home</router-link>
     </ul>
   </nav>
-
-  <router-view></router-view>
+  <div class="container">
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
@@ -23,11 +24,15 @@ export default {
   width: calc(100% - 2rem);
   height: fit-content;
   padding: 1rem;
-  background: rgb(34, 34, 34);
+  background: hsl(0, 0%, 12%);
   padding: 0.5rem 1rem;
+  border-bottom: solid 3px var(--green);
 }
 .nav-list {
   display: flex;
   flex-direction: row-reverse;
+}
+.container {
+  padding: 1rem;
 }
 </style>
