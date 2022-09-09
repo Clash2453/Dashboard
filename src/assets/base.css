@@ -46,3 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+:root{
+	--green: #10C489;
+	--red: rgb(254, 0, 96);
+	--dark: #1E1E1E;
+	--gray: #303030;
+}
