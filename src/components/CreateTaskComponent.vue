@@ -2,7 +2,7 @@
   <div class="container">
     <input class="text-input" type="text" placeholder="Add new task..." />
     <div class="additional-options">
-      <button class="create-button">Create</button>
+      <button class="green-button">Create</button>
     </div>
   </div>
 </template>
@@ -11,9 +11,13 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: var(--gray);
   padding: 1rem;
   border-radius: 10px;
+  width: calc(90% - 2rem);
+  min-height: 10rem;
+  gap: 2rem;
 }
 .additional-options {
   display: flex;
@@ -28,22 +32,10 @@
   background-color: transparent;
   color: whitesmoke;
 }
-.create-button {
-  background-color: transparent;
-  border: solid 2px var(--green);
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  color: white;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-}
-.additional-options{
-    display: flex;
-    padding: 1rem 0;
-}
-.create-button:hover {
-  background-color: var(--green);
-  color: var(--dark);
+
+.additional-options {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 1rem 0;
 }
 </style>
