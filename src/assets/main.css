@@ -1,25 +1,78 @@
 @import "./base.css";
 
-body{
+body {
   background-color: var(--dark);
 }
 
-.nav-link{
+.nav-link {
   padding: 0.5rem 1rem;
   font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
   text-decoration: none;
   color: whitesmoke;
 }
-.nav-link:hover{
+.nav-link:hover {
   color: var(--green);
   text-decoration: underline;
   background-color: rgba(255, 255, 255, 0.1);
 }
-::placeholder{
+::placeholder {
   color: var(--green);
   opacity: 0.5;
 }
-textarea:focus, input:focus{
+textarea:focus, input:focus {
   outline: none;
+}
+.component-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.green-button,
+.red-button {
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+.green-button {
+  border: solid 2px var(--green);
+}
+.red-button {
+  border: solid 2px var(--red);
+}
+.green-button:hover {
+  background-color: var(--green);
+  color: var(--dark);
+}
+.red-button:hover {
+  background-color: var(--red);
+  color: var(--dark);
+}
+.task-title {
+  color: whitesmoke;
+  font-size: 2rem;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 75px;
+}
+.due {
+  font-family: "Lato", sans-serif;
+  color: whitesmoke;
+  font-size: 1.2rem;
+}
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
