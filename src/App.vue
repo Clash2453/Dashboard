@@ -23,7 +23,7 @@ export default {
 .nav-bar {
   width: calc(100% - 2rem);
   height: fit-content;
-  padding: 1rem;
+  padding: 1.5rem;
   background: hsl(0, 0%, 12%);
   padding: 0.5rem 1rem;
   border-bottom: solid 3px var(--green);
