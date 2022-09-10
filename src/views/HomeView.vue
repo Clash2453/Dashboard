@@ -1,28 +1,47 @@
 <script>
 import CreateTask from "../components/CreateTaskComponent.vue";
 import ClockComponent from "../components/ClockComponent.vue";
-export default { components: { CreateTask, ClockComponent } };
+import CurrentTaskComponent from "../components/CurrentTaskComponent.vue";
+import NextTaskComponent from "../components/NextTaskComponent.vue";
+import TaskListComponent from "../components/TaskListComponent.vue";
+export default {
+  components: {
+    CreateTask,
+    ClockComponent,
+    CurrentTaskComponent,
+    NextTaskComponent,
+    TaskListComponent,
+  },
+};
 </script>
 
 <template>
   <div class="home-container">
-    <div id="create-task">
+    <div class="component-container" id="create-task">
       <CreateTask></CreateTask>
     </div>
-    <div id="clock">
+    <div class="component-container" id="clock">
       <ClockComponent></ClockComponent>
     </div>
-    <div id="current-task"></div>
-    <div id="next-task"></div>
-    <div id="task-list"></div>
+    <div class="component-container" id="current-task">
+      <CurrentTaskComponent></CurrentTaskComponent>
+    </div>
+    <div class="component-container" id="next-task">
+      <NextTaskComponent></NextTaskComponent>
+    </div>
+    <div class="component-container" id="task-list">
+      <TaskListComponent></TaskListComponent>
+    </div>
   </div>
 </template>
 
 <style>
 .home-container {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - (60px + 2rem));
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "clock current-task task-list"
     "clock current-task task-list"
