@@ -2,10 +2,29 @@
   <div class="container">
     <input class="text-input" type="text" placeholder="Add new task..." />
     <div class="additional-options">
-      <button class="green-button">Create</button>
+      <button class="green-button" @click="creating= !creating">Create</button>
     </div>
   </div>
+  <CreateFormComponent
+    v-if="creating"
+    :creating="creating"
+  ></CreateFormComponent>
 </template>
+
+<script>
+import CreateFormComponent from "./CreateFormComponent.vue";
+
+export default {
+  data: function () {
+    return {
+      creating: false,
+    };
+  },
+  components: {
+    CreateFormComponent,
+  },
+};
+</script>
 
 <style scoped>
 .container {
@@ -24,15 +43,6 @@
   width: 100%;
   flex-wrap: wrap;
 }
-.text-input {
-  font-size: 1.5rem;
-  font-family: "Lato", sans-serif;
-  border: none;
-  border-bottom: 3px solid var(--green);
-  background-color: transparent;
-  color: whitesmoke;
-}
-
 .additional-options {
   display: flex;
   flex-direction: row-reverse;
